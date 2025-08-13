@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rapidllm"
-version = "0.1.0"
+version = "0.2.0"
 description = "A small framework for building predictable multi-tool LLM agents."
 authors = [
     { name = "Patrick Tuyizere", email = "you@example.com" }
