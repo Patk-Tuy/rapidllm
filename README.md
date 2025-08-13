@@ -28,7 +28,3 @@ if __name__ == "__main__":
         tools=TOOLS,
         model="gpt-4"
     )
-
-## MIT License
-
-Copyright (c) 2025 Patrick Tuyizere
