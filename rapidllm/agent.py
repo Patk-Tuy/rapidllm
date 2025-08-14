@@ -16,7 +16,7 @@ class Agent:
         if initial_user_message:
             self.messages.append({"role": "user", "content": initial_user_message})
     
-    def run(self, max_steps: int = 20):
+    def run(self, max_steps: int = 20, log_ouput = True):
         steps = 0
         while steps < max_steps:
             steps += 1
@@ -48,6 +48,10 @@ class Agent:
 
             try:
                 result = tool_fn(**func_args)
+                if log_ouput:
+                    print(result)
+                else:
+                    continue
             except Exception as e:
                 # Report the error back to LLM and stop
                 err = {"error": str(e)}
