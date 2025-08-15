@@ -16,7 +16,7 @@ class Agent:
         if initial_user_message:
             self.messages.append({"role": "user", "content": initial_user_message})
     
-    def run(self, max_steps: int = 20, log_ouput = True):
+    def run(self, max_steps: int = 20, log_output = True):
         steps = 0
         while steps < max_steps:
             steps += 1
@@ -48,7 +48,7 @@ class Agent:
 
             try:
                 result = tool_fn(**func_args)
-                if log_ouput:
+                if log_output:
                     print(result)
                 else:
                     continue

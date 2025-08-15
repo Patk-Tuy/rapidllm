@@ -23,7 +23,7 @@ def extract_function_call(message) -> Tuple[str, Any]:
     return getattr(fc, "name", None), getattr(fc, "arguments", None)
 
 def normalize_arguments(func_args_raw: Any) -> dict:
-    """Return a Python dict parsed fromt the raw arguments.
+    """Return a Python dict parsed from the raw arguments.
     
     - If string -> parse JSON
     - If None -> {}
